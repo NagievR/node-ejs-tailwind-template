@@ -1,0 +1,52 @@
+{
+  "name": "nodejs-tailwind-template",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "clear:dist": "rm -rf ./public/dist",
+    "tailwind:watch": "postcss client/styles/tailwind.css -o public/dist/style.css --watch",
+    "app:watch": "nodemon -e ejs,js",
+    "gulp": "gulp",
+    "dev": "concurrently \"npm run clear:dist\" \"npm run tailwind:watch\" \"npm run gulp\" \"npm run app:watch\""
+  },
+  "dependencies": {
+    "@babel/core": "^7.24.0",
+    "connect-livereload": "^0.6.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "livereload": "^0.9.3",
+    "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.0",
+    "autoprefixer": "^10.4.18",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "concurrently": "^8.2.2",
+    "gulp": "^4.0.2",
+    "gulp-bro": "^2.0.0",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
+  }
+}
