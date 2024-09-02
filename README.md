@@ -1,6 +1,8 @@
 
 DOT FORGET FOR DEPLOY!
 
+npm i concurrently
+
   "scripts": {
     "clear:dist": "rm -rf ./public/dist",
     "tailwind:watch": "postcss client/styles/tailwind.css -o public/dist/style.css --watch",
