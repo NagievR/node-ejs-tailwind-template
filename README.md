@@ -1,7 +1,7 @@
 
 DOT FORGET FOR DEPLOY!
 
-npm i concurrently
+Node 20+ (22)
 
   "scripts": {
     "clear:dist": "rm -rf ./public/dist",
